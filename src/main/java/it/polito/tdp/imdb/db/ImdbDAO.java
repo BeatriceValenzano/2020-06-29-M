@@ -148,7 +148,7 @@ public class ImdbDAO {
 				Director regista = idMapRegisti.get(rs.getInt("director_id"));
 				Actor attore = idMapAttori.get(rs.getInt("actor_id"));
 				
-				if(!mappa.containsKey(regista)){ 
+				if(mappa.containsKey(regista)){ 
 					mappa.get(regista).add(attore);
 				} else {
 					Set<Actor> attori = new HashSet<Actor>();
